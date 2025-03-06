@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.Shrawan.YahooTest.YahooFinanceTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 99.77 s -- in com.Shrawan.YahooTest.YahooFinanceTest

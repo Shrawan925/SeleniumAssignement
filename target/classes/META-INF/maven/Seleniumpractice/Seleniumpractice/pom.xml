@@ -1,0 +1,94 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>Seleniumpractice</groupId>
+  <artifactId>Seleniumpractice</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <build>
+  	<pluginManagement>
+  		<plugins>
+  		<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+		<plugin>
+		    <groupId>org.apache.maven.plugins</groupId>
+		    <artifactId>maven-surefire-plugin</artifactId>
+		    <version>3.1.2</version>
+		    
+		</plugin>
+		<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+		<plugin>
+		    <groupId>org.apache.maven.plugins</groupId>
+		    <artifactId>maven-compiler-plugin</artifactId>
+		    <version>3.14.0</version>
+		    <configuration>
+		    	<suite>
+		    	<configuration>testng.xml</configuration>
+		    	</suite>
+		    </configuration>
+		</plugin>
+  		</plugins>
+  	</pluginManagement>
+  </build>
+  
+
+  <dependencies>
+
+      <dependency>
+          <groupId>io.github.bonigarcia</groupId>
+          <artifactId>webdrivermanager</artifactId>
+          <version>5.8.0</version>
+      </dependency>
+
+      <!-- Selenium Java -->
+      <dependency>
+          <groupId>org.seleniumhq.selenium</groupId>
+          <artifactId>selenium-java</artifactId>
+          <version>4.22.0</version>
+      </dependency>
+    
+    
+
+      <!-- Async HTTP Client (Fix for missing org.asynchttpclient.DefaultAsyncHttpClientConfig$Builder) -->
+      <dependency>
+          <groupId>org.asynchttpclient</groupId>
+          <artifactId>async-http-client</artifactId>
+          <version>2.12.3</version>
+      </dependency>
+
+      <!-- Netty (Required for Selenium HTTP client) -->
+      <dependency>
+          <groupId>io.netty</groupId>
+          <artifactId>netty-handler</artifactId>
+          <version>4.1.100.Final</version>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+	<dependency>
+    	<groupId>org.testng</groupId>
+    	<artifactId>testng</artifactId>
+    	<version>7.10.2</version>
+	</dependency>
+      <dependency>
+          <groupId>io.netty</groupId>
+          <artifactId>netty-codec</artifactId>
+          <version>4.1.100.Final</version>
+      </dependency>
+
+      <!--<Selenium HTTP Netty Client></Selenium>-->
+      <!--<dependency>
+          <groupId>org.seleniumhq.selenium</groupId>
+          <artifactId>selenium-http-jdk-client</artifactId>
+          <version>4.22.0</version>
+      </dependency>
+
+      <DevTools (Fix for Chrome DevTools Protocol issues)
+          <groupId>org.seleniumhq.selenium</groupId>
+          <artifactId>selenium-devtools-v134</artifactId>
+          <version>4.22.0</version>
+      </dependency>--> 
+      
+
+  </dependencies>
+
+
+</project>
