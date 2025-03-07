@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-03-07T10:09:23 IST" name="Default suite" finished-at="2025-03-07T10:10:36 IST" duration-ms="72372">
+    <groups>
+    </groups>
+    <test started-at="2025-03-07T10:09:23 IST" name="Default test" finished-at="2025-03-07T10:10:36 IST" duration-ms="72372">
+      <class name="com.Shrawan.YahooTest.YahooFinanceTest">
+        <test-method is-config="true" signature="LaunchYahooFBrowser()[pri:0, instance:com.Shrawan.YahooTest.YahooFinanceTest@7ae0a9ec]" started-at="2025-03-07T10:09:29 IST" name="LaunchYahooFBrowser" finished-at="2025-03-07T10:09:31 IST" duration-ms="1522" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchYahooFBrowser -->
+        <test-method signature="OpenSite()[pri:1, instance:com.Shrawan.YahooTest.YahooFinanceTest@7ae0a9ec]" started-at="2025-03-07T10:09:41 IST" name="OpenSite" finished-at="2025-03-07T10:10:26 IST" duration-ms="44697" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenSite -->
+        <test-method signature="searchStock()[pri:2, instance:com.Shrawan.YahooTest.YahooFinanceTest@7ae0a9ec]" started-at="2025-03-07T10:10:26 IST" name="searchStock" finished-at="2025-03-07T10:10:26 IST" duration-ms="208" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchStock -->
+        <test-method signature="verifyAutoSuggest()[pri:3, instance:com.Shrawan.YahooTest.YahooFinanceTest@7ae0a9ec]" started-at="2025-03-07T10:10:26 IST" name="verifyAutoSuggest" finished-at="2025-03-07T10:10:27 IST" duration-ms="571" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAutoSuggest -->
+        <test-method signature="clickFirstSuggestion()[pri:4, instance:com.Shrawan.YahooTest.YahooFinanceTest@7ae0a9ec]" started-at="2025-03-07T10:10:27 IST" name="clickFirstSuggestion" finished-at="2025-03-07T10:10:27 IST" duration-ms="420" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickFirstSuggestion -->
+        <test-method signature="verifyStockPrice()[pri:5, instance:com.Shrawan.YahooTest.YahooFinanceTest@7ae0a9ec]" started-at="2025-03-07T10:10:27 IST" name="verifyStockPrice" finished-at="2025-03-07T10:10:30 IST" duration-ms="2579" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyStockPrice -->
+        <test-method signature="captureStockData()[pri:6, instance:com.Shrawan.YahooTest.YahooFinanceTest@7ae0a9ec]" started-at="2025-03-07T10:10:30 IST" name="captureStockData" finished-at="2025-03-07T10:10:30 IST" duration-ms="389" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureStockData -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.Shrawan.YahooTest.YahooFinanceTest@7ae0a9ec]" started-at="2025-03-07T10:10:35 IST" name="teardown" finished-at="2025-03-07T10:10:36 IST" duration-ms="471" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.Shrawan.YahooTest.YahooFinanceTest -->
+      <class name="com.Shrawan.YahooTest.TeslaInvalidSearch">
+        <test-method is-config="true" signature="LaunchYahooFBrowser()[pri:0, instance:com.Shrawan.YahooTest.TeslaInvalidSearch@19932c16]" started-at="2025-03-07T10:09:23 IST" name="LaunchYahooFBrowser" finished-at="2025-03-07T10:09:29 IST" duration-ms="6107" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchYahooFBrowser -->
+        <test-method signature="OpenSite()[pri:1, instance:com.Shrawan.YahooTest.TeslaInvalidSearch@19932c16]" started-at="2025-03-07T10:09:31 IST" name="OpenSite" finished-at="2025-03-07T10:09:41 IST" duration-ms="10142" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenSite -->
+        <test-method signature="searchInvalidStock()[pri:2, instance:com.Shrawan.YahooTest.TeslaInvalidSearch@19932c16]" started-at="2025-03-07T10:09:41 IST" name="searchInvalidStock" finished-at="2025-03-07T10:09:41 IST" duration-ms="204" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchInvalidStock -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.Shrawan.YahooTest.TeslaInvalidSearch@19932c16]" started-at="2025-03-07T10:10:30 IST" name="teardown" finished-at="2025-03-07T10:10:35 IST" duration-ms="4980" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.Shrawan.YahooTest.TeslaInvalidSearch -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -20,7 +20,7 @@ import org.testng.asserts.SoftAssert;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class YahooFinanceTest {
-	public static String YAhoo_SITE_URL="https://finance.yahoo.com/";
+	public static String YAHOO_SITE_URL="https://finance.yahoo.com/";
 	public static String STOCK_SYMBOL="TESLA";
 	public static double MIN_STOCK_PRICE= 200.0;
 	
@@ -29,24 +29,26 @@ public class YahooFinanceTest {
 
     @BeforeTest
     public void LaunchYahooFBrowser() {
-    	//WebDriverManager.firefoxdriver().setup();
         //driver = new FirefoxDriver();
     	driver=new ChromeDriver();
         driver.manage().window().maximize();
-        System.out.println("Browser Launched as Expected");
+        System.out.println("Chrome Browser Launched as Expected");
+        softassert.assertTrue(true,"Chrome Browser Launched as Expected");
+        //softassert.assertAll();
     }
 
     //@Parameters("url")
     @Test(priority=1)
     public void OpenSite() {
         try {
-            driver.get(YAhoo_SITE_URL);
+            driver.get(YAHOO_SITE_URL);
             System.out.println("Opened Yahoo Finance Site As Expected");
             softassert.assertTrue(driver.getCurrentUrl().contains("yahoo.com"), "Yahoo Finance URL opened as Expected: " + "https://finance.yahoo.com/");
         } catch (Exception e) {
             System.out.println("Test failed: " + e.getMessage());
             softassert.fail("Test Failed: " + e.getMessage());
         }
+        //softassert.assertAll();
     }
 
     //@Parameters("STOCK_SYMBOL")
@@ -56,6 +58,7 @@ public class YahooFinanceTest {
         searchBox.sendKeys(STOCK_SYMBOL);
         System.out.println("Entered " + STOCK_SYMBOL + " in the search text box As Expected");
         softassert.assertTrue(searchBox.getAttribute("value").contains(STOCK_SYMBOL), "Test Data Entered in Search text box as Expected: " + STOCK_SYMBOL);
+        //softassert.assertAll();
     }
 
     @Test(priority = 3)
@@ -64,6 +67,7 @@ public class YahooFinanceTest {
         String suggestionText = firstSuggestion.getAttribute("title");
         System.out.println("Autosuggest text: " + suggestionText);
         softassert.assertTrue(suggestionText.equalsIgnoreCase("Tesla, Inc."), "Autosuggest text verification passed: " + suggestionText);
+        //softassert.assertAll();
     }
 
     @Test(priority = 4)
@@ -72,6 +76,7 @@ public class YahooFinanceTest {
         firstSuggestion.click();
         System.out.println("Browser clicked on First Suggested Autocomplete Text as Expected");
         softassert.assertTrue(true, "Browser clicked on First Suggested Autocomplete Text as Expected");
+        //softassert.assertAll();
     }
 
     //@Parameters("MIN_STOCK_PRICE")
@@ -81,6 +86,7 @@ public class YahooFinanceTest {
         double stockPrice = Double.parseDouble(stockPriceElement.getText().replace(",", ""));
         System.out.println("TESLA Current stock price is: $" + stockPrice);
         softassert.assertTrue(stockPrice > MIN_STOCK_PRICE, "Verify the TESLA Stock Price is greater than " + MIN_STOCK_PRICE + ": $" + stockPrice);
+        //softassert.assertAll();
     }
 
     @Test(priority = 6)
@@ -95,6 +101,7 @@ public class YahooFinanceTest {
         System.out.println("TESLA Total Stock Volume: " + volume);
         softassert.assertTrue(!previousClose.isEmpty(), "TESLA Stock Previous Closing Price: " + previousClose);
         softassert.assertTrue(!volume.isEmpty(), "TESLA Total Stock Volume: " + volume);
+        //softassert.assertAll();
     }
 
     @AfterTest
@@ -103,6 +110,7 @@ public class YahooFinanceTest {
             driver.quit();
         }
         System.out.println("Test completed, browser closed.");
+        softassert.assertTrue(true,"Test completed, browser closed.");
         softassert.assertAll(); // Report all assertion failures at the end
     }
 
